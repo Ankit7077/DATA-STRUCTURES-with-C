@@ -100,7 +100,7 @@ struct node *deletenode(struct node *root, int key)
     {
         root->right = deletenode(root->right, key);
     }
-    // if the node with the key is found
+    
     else
     {
         // Node with only one child or no child
@@ -136,32 +136,36 @@ struct node *deletenode(struct node *root, int key)
 
 
 /* main function to give values (during compile time) by calling inorder traversal ,insert(to insert a new node in the tree) function
- search(to search the node entered by the user) function*/
+ search(to search the node entered by the user) function delete function to delete the value enterd by the user */  
 int main()
 {
     struct node *root = NULL;
+    printf("value before deleting node\n");
     root = insert(root, 50);
     insert(root, 20);
     insert(root, 66);
     insert(root, 30);
     insert(root, 70);
     inorder(root);
+    printf("\nvalue after deleting node\n");
+    deletenode(root,70);
+    inorder(root);
+     // Search for a key
     
-    // Search for a key
+    int key=35;
+    printf("\nenter the value to be searched %d",key);
     
-    int key = 35;
-    
-    /*making a search result function for adding a print function to sreach function*/
+    /*making a search result function for adding a print statment to search function*/
     struct node *searchResult = search(root, key);
 
-    // Print the search result
+    // Print the search result 
     if (searchResult != NULL)
     {
-        printf("\n%d found", key);
+        printf("\n %d found", key);
     }
     else
     {
-        printf("\n%d not found", key);
+        printf("\n %d not found", key);
     }
     return 0;
 }

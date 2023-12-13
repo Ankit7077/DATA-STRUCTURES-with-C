@@ -72,11 +72,10 @@ In both cases, i, j, and k are appropriately incremented.*/
         k++;
     }
 }
-/*After these loops,from step(43 to 74 including comments)  the merged array arr contains all the elements from the original subarrays L and R in sorted order, and the indices i, j, and k have been updated accordingly.*/
+/*After these loops,from step(43 to 74 including comments)  the merged array arr contains all the elements from the original subarrays L and R in sorted order, 
+and the indices i, j, and k have been updated accordingly.*/
 
 /*(From step 80 to 89) This is the recursive function for the Merge Sort algorithm.*/
-
-
 
 void mergeSort(int arr[], int l, int r)
 //It takes an array arr and two indices l and r representing the range to be sorted. 
